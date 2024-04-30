@@ -396,7 +396,7 @@ console.log(map1);
 // Expected output: Array [2, 8, 18, 32]
 
 ```
-
+_______________________________________
 #### what does filter mean in array js
 >[!TIP]
 >The `filter()` method of Array instances creates a shallow copy of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function. `i rangi xamu map masivi nav sozdat mekna return dora neki map lengtha aliw kada nametona i metona i metona ba usloviyai mo musorora da musorka partoya iram 3 parametr megira 1 callback`
@@ -410,7 +410,7 @@ const result = words.filter((word) => word.length > 6);
 console.log(result);
 // Expected output: Array ["exuberant", "destruction", "present"]
 ```
-
+_____________________________________________
 #### what does foreach mean in array js
 >[!TIP]
 >The `forEach()` method of Array instances executes a provided function once for each array element.` i rangi (for)-ai rangi xamu da drunw return kada namewava copy i xami for`
@@ -430,7 +430,7 @@ console.log(sum);
 // Actual output: 0
 
 ```
-
+___________________________________________
 #### what does find mean in array js
 >[!TIP]
 > The `find()` method of Array instances `returns the first element in the provided array` that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned. `i rangi filter nestai i ba xamu usloviya yoft 1 tai avalwa mebrora tamom 3 callback dora` 
@@ -451,7 +451,7 @@ const found = array1.find((element) => element > 10);
 console.log(found);
 // Expected output: 12
 ```
-
+__________________________________________
 #### what does sort mean in array js
 >[!TIP]
 >The `sort()` method of Array instances sorts the elements of an array in place and returns the reference to the same array, now sorted. The default sort order is ascending, built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.`i masivi asosira aliw mekna. Sort 2 parametr megira 1 callback dora`
@@ -513,7 +513,7 @@ mixedNumericArray.sort(); // [1, 200, 40, 5, '700', '80', '9']
 mixedNumericArray.sort(compareNumbers); // [1, 5, '9', 40, '80', 200, '700']
 
 ```
-
+_________________________________________________
 #### what does toSorted mean in array js
 >[!TIP]
 >The `toSorted()` method of Array instances is the copying version of the sort() method. It returns a new array with the elements sorted in ascending order. `iram rangi Sort() ai a,b dora da parametrw neki masivi asosira aliw namekna`
