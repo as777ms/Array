@@ -380,7 +380,7 @@ console.log(uint8); // Uint8Array [1, 2, 3]
 #### What is a callback? 
 In simple terms: a callback is a function that must be executed after another function has completed execution (hence the name: callback).
 #### agar da yagon metod argumentsh bo funksiya biya callback megan
-
+_________________________________
 #### what does map mean in array js
 >[!TIP]
 > The `map()` method of Array instances `creates a new array` populated with the results of calling a provided function on every element in the calling array. `3 callback qabul mekna: 1 parametr qabul mekna xamu callback map ragi siklai return dora (map a returnw masivi navay masivi ki ba usloviyai ma aliw widai neki length.a liw namekna)`
