@@ -538,3 +538,163 @@ console.log(sortedValues); // [1, 2, 10, 21]
 console.log(values); // [1, 10, 21, 2]
 ```
 :beginner: :basecamp: :basecamp: :basecamp: :basecamp: :basecamp: :basecamp:
+
+
+
+~~-~~~~-~~~~-~~~~-~~~~-~~~~-~~~~-~~~~-~~~~~~-~~~~-~~
+#### what can do reduce in js?
+>[!TIP]
+>The array `reduce` in JavaScript is a predefined method used to reduce an array to a single value by passing a `callback` function on each element of the array. It accepts a function executed on all the items of the specified array in the left-to-right sequence. The returned single value is stored in the accumulator.
+`i 1 callback dora 4 vallue accumulyator ~nachalni sostoyani agar nachalni sostoyani natem aftomaticheski ai avali array megira bad el,index,array (accumulyator nachalni sostoyani megira)`
+>bo ya chii diga reduce chi vozvrowat mekna reduce acc vozvrowat mekna
+>acc chiay (acc - element)
+
+
+``` js
+const data = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+const flat = data.reduce((total, amount) => {
+  return total.concat(amount);
+}, []);
+
+flat // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+```
+
+
+
+#### what does mean destructuring in js
+>[!TIP]
+>JavaScript Object Destructuring is the syntax for extracting values from an object property and assigning them to a variable. The destructuring is also possible for JavaScript Arrays. By default, the object key name becomes the variable that holds the respective value.`По умолчанию имя ключа объекта становится переменной, содержащей соответствующее значение.`
+`yakchand elementi masiva izvlekat mekni da 1 varieble `
+
+
+``` js
+let a, b, rest;
+[a, b] = [10, 20];
+
+console.log(a);
+// Expected output: 10
+
+console.log(b);
+// Expected output: 20
+
+[a, b, ...rest] = [10, 20, 30, 40, 50];
+
+console.log(rest);
+// Expected output: Array [30, 40, 50]
+
+```
+
+``` diff
+-Syntax
+```
+
+
+
+``` js
+const [a, b] = array;
+const [a, , b] = array;
+const [a = aDefault, b] = array;
+const [a, b, ...rest] = array;
+const [a, , b, ...rest] = array;
+const [a, b, ...{ pop, push }] = array;
+const [a, b, ...[c, d]] = array;
+
+const { a, b } = obj;
+const { a: a1, b: b1 } = obj;
+const { a: a1 = aDefault, b = bDefault } = obj;
+const { a, b, ...rest } = obj;
+const { a: a1, b: b1, ...rest } = obj;
+const { [key]: a } = obj;
+
+let a, b, a1, b1, c, d, rest, pop, push;
+[a, b] = array;
+[a, , b] = array;
+[a = aDefault, b] = array;
+[a, b, ...rest] = array;
+[a, , b, ...rest] = array;
+[a, b, ...{ pop, push }] = array;
+[a, b, ...[c, d]] = array;
+
+({ a, b } = obj); // parentheses are required
+({ a: a1, b: b1 } = obj);
+({ a: a1 = aDefault, b = bDefault } = obj);
+({ a, b, ...rest } = obj);
+({ a: a1, b: b1, ...rest } = obj);
+
+```
+
+
+
+
+
+#### js spread array
+>[!TIP]
+>`...spread` You can use it to merge or clone an array. Or use it to convert iterables to an array.
+
+``` js
+// Merge Array
+[...array1, ...array2]
+
+// Clone Array
+[...array]
+
+// String → Array
+[...'string']
+
+// Set  → Array
+[...new Set([1,2,3])]
+
+// Node List → Array
+[...nodeList]
+
+// Arguments → Array
+[...arguments]
+```
+
+#### ...Spread is like Russian Dolls
+
+>The spread syntax takes your array and expands it into elements. Imagine your array is like those Russian Dolls. When you call the spread syntax on it, it will take the nested individual doll out and lay it out in its own individual pieces.`spread xijvaqt silkoora uniq namekna u faqat rangi xami surat elementoi masiva kopi mekna drunwona judo mekna`
+
+![dolls](./dolls.jpg)
+
+
+
+#### rest... 
+>[!TIP]
+>`vaqte da function chan parametr biya mo resta istifoda mebarem rest beskonechno qabul mekna`
+
+
+``` js
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
+
+``` js
+function get(...arrgument){
+	return [...arrgument]
+}
+console.log(get([1,2,3,4],[1,2,3,4]))//[ [ 1, 2, 3, 4 ], [ 1, 2, 3, 4 ] ]
+
+```
+
+``` js
+function get(...a) {
+    let a1 =[...a]
+   return a1
+}
+console.log(get(1,2,3)); //[ 1, 2, 3 ]
+```
+^|^ 
+in the top you can see that if we dont know how much arguments will user enter we use `...rest`
