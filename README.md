@@ -698,3 +698,6 @@ console.log(get(1,2,3)); //[ 1, 2, 3 ]
 ```
 ^|^ 
 in the top you can see that if we dont know how much arguments will user enter we use `...rest`
+
+
+![axir](./axir)
