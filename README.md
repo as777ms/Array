@@ -701,3 +701,34 @@ in the top you can see that if we dont know how much arguments will user enter w
 
 
 ![axir](./axir)
+
+
+>[!TIP]
+>The `Array.from()` static method creates a new, shallow-copied Array instance from an iterable or array-like object.
+```js
+console.log(Array.from('foo'));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
+
+
+
+>[!TIP]
+>`Find lst index` i oxiron idexwa niwon meta da array aga yaxela bowan 1 giwa niwon meta ku i bowa 2 giwa meta
+
+```js
+let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"},
+  {id: 4, name: "John"}
+];
+
+// Find the index of the first John
+alert(users.findIndex(user => user.name == 'John')); // 0
+
+// Find the index of the last John
+alert(users.findLastIndex(user => user.name == 'John')); // 3
+```
